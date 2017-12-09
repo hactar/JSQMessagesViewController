@@ -59,9 +59,10 @@ FOUNDATION_EXPORT const CGFloat kJSQMessagesTypingIndicatorFooterViewHeight;
  *  @param shouldDisplayOnLeft Specifies whether the typing indicator displays on the left or right side of the collection view when displayed.
  *  @param collectionView      The collection view in which the footer view will appear. This value must not be `nil`.
  */
+
 - (void)configureWithEllipsisColor:(UIColor *)ellipsisColor
                 messageBubbleColor:(UIColor *)messageBubbleColor
-               shouldDisplayOnLeft:(BOOL)shouldDisplayOnLeft
-                 forCollectionView:(UICollectionView *)collectionView;
-
+                          animated:(BOOL)animated
+                shouldDisplayOnLeft:(BOOL)shouldDisplayOnLeft
+                  forCollectionView:(UICollectionView *)collectionView;
 @end
