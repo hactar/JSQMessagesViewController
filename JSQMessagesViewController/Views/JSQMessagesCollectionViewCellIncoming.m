@@ -27,10 +27,21 @@
     [super awakeFromNib];
     self.messageBubbleTopLabel.textAlignment = NSTextAlignmentLeft;
     self.cellBottomLabel.textAlignment = NSTextAlignmentLeft;
+    self.shareURL = [NSURL URLWithString:@"https://orf.at"];
 }
 
+- (void)willMoveToSuperview:(UIView *)newSuperview {
+    if (self.shareURL != nil) {
+        self.shareButton.hidden = NO;
+    } else {
+        self.shareButton.hidden = YES;
+    }
+    [super willMoveToSuperview:newSuperview];
+}
 - (IBAction)shareButtonTapped:(id)sender {
-    NSLog(@"share button tapped...");
+    NSLog(@"Going to share %@", self.shareURL);
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[self.shareURL] applicationActivities:nil];
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:activityViewController animated:YES completion:nil];
 }
 
 @end

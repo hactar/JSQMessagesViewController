@@ -162,6 +162,13 @@
 @property (weak, nonatomic) UIView *mediaView;
 
 /**
+ *  The URL to share when this cells share button is hit.
+ *
+ *
+ */
+@property (strong, nonatomic) NSURL *shareURL;
+
+/**
  *  Returns the underlying gesture recognizer for tap gestures in the avatarImageView of the cell.
  *  This gesture handles the tap event for the avatarImageView and notifies the cell's delegate.
  */
