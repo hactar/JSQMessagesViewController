@@ -29,4 +29,8 @@
     self.cellBottomLabel.textAlignment = NSTextAlignmentLeft;
 }
 
+- (IBAction)shareButtonTapped:(id)sender {
+    NSLog(@"share button tapped...");
+}
+
 @end
