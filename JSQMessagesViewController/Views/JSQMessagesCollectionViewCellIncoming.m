@@ -27,7 +27,6 @@
     [super awakeFromNib];
     self.messageBubbleTopLabel.textAlignment = NSTextAlignmentLeft;
     self.cellBottomLabel.textAlignment = NSTextAlignmentLeft;
-    self.shareURL = [NSURL URLWithString:@"https://orf.at"];
 }
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {
