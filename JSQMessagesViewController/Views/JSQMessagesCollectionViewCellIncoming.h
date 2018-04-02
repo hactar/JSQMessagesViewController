@@ -23,6 +23,8 @@
  *  of `JSQMessagesCollectionViewCell` that represents an incoming message data item.
  */
 @interface JSQMessagesCollectionViewCellIncoming : JSQMessagesCollectionViewCell
+@property (weak, nonatomic) IBOutlet UIView *shareButtonSuperView;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *buttonSuperViewWidthContraint;
 
 @end

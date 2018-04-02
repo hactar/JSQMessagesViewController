@@ -29,14 +29,6 @@
     self.cellBottomLabel.textAlignment = NSTextAlignmentLeft;
 }
 
-- (void)willMoveToSuperview:(UIView *)newSuperview {
-    if (self.shareURL != nil) {
-        self.shareButton.hidden = NO;
-    } else {
-        self.shareButton.hidden = YES;
-    }
-    [super willMoveToSuperview:newSuperview];
-}
 - (IBAction)shareButtonTapped:(id)sender {
     NSLog(@"Going to share %@", self.shareURL);
     UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[self.shareURL] applicationActivities:nil];
