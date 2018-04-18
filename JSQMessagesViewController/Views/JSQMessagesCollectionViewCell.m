@@ -211,14 +211,14 @@ static NSMutableSet *jsqMessagesCollectionViewCellActions = nil;
 
 - (void)setHighlighted:(BOOL)highlighted
 {
-    [super setHighlighted:highlighted];
-    self.messageBubbleImageView.highlighted = highlighted;
+   // [super setHighlighted:highlighted];
+    //self.messageBubbleImageView.highlighted = highlighted;
 }
 
 - (void)setSelected:(BOOL)selected
 {
-    [super setSelected:selected];
-    self.messageBubbleImageView.highlighted = selected;
+   // [super setSelected:selected];
+   // self.messageBubbleImageView.highlighted = selected;
 }
 
 //  FIXME: radar 18326340
@@ -227,14 +227,7 @@ static NSMutableSet *jsqMessagesCollectionViewCellActions = nil;
 //         see issue #484
 //         https://github.com/jessesquires/JSQMessagesViewController/issues/484
 //
-- (void)setBounds:(CGRect)bounds
-{
-    [super setBounds:bounds];
 
-    if ([UIDevice jsq_isCurrentDeviceBeforeiOS8]) {
-        self.contentView.frame = bounds;
-    }
-}
 
 #pragma mark - Menu actions
 
@@ -313,7 +306,7 @@ static NSMutableSet *jsqMessagesCollectionViewCellActions = nil;
     [self.textView removeFromSuperview];
 
     [mediaView setTranslatesAutoresizingMaskIntoConstraints:NO];
-    mediaView.frame = self.messageBubbleContainerView.bounds;
+    //mediaView.frame = self.messageBubbleContainerView.bounds;
 
     [self.messageBubbleContainerView addSubview:mediaView];
     [self.messageBubbleContainerView jsq_pinAllEdgesOfSubview:mediaView];
