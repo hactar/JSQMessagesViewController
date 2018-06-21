@@ -19,20 +19,23 @@
 #import "JSQMessagesCollectionViewCellIncoming.h"
 
 @implementation JSQMessagesCollectionViewCellIncoming
-
+    
 #pragma mark - Overrides
-
+    
 - (void)awakeFromNib
-{
-    [super awakeFromNib];
-    self.messageBubbleTopLabel.textAlignment = NSTextAlignmentLeft;
-    self.cellBottomLabel.textAlignment = NSTextAlignmentLeft;
-}
-
-- (IBAction)shareButtonTapped:(id)sender {
+    {
+        [super awakeFromNib];
+        self.messageBubbleTopLabel.textAlignment = NSTextAlignmentLeft;
+        self.cellBottomLabel.textAlignment = NSTextAlignmentLeft;
+    }
+    
+- (IBAction)shareButtonTapped:(UIButton *)sender {
     NSLog(@"Going to share %@", self.shareURL);
     UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[self.shareURL] applicationActivities:nil];
+    activityViewController.popoverPresentationController.sourceView = sender;
+    activityViewController.popoverPresentationController.sourceRect = sender.bounds;
+    
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:activityViewController animated:YES completion:nil];
 }
-
-@end
+    
+    @end
