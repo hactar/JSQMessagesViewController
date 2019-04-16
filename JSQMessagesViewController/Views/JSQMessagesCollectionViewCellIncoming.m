@@ -27,6 +27,7 @@
         [super awakeFromNib];
         self.messageBubbleTopLabel.textAlignment = NSTextAlignmentLeft;
         self.cellBottomLabel.textAlignment = NSTextAlignmentLeft;
+        self.shareButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
     }
     
 - (IBAction)shareButtonTapped:(UIButton *)sender {
