@@ -40,19 +40,19 @@
 }
 
 - (IBAction)shareButtonTapped:(UIButton *)sender {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Weitere Optionen" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Further options" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     alertController.popoverPresentationController.sourceView = sender;
     alertController.popoverPresentationController.sourceRect = sender.bounds;
     
-    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"Antwort mit anderen teilen" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"Share answer with others" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self actuallyShare:sender];
     }];
     
-    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"Feedback geben" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"Send feedback" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         NSLog(@"Open Feedback interface...");
     }];
     
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Abbrechen" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         // do nothing
     }];
     [alertController addAction:action1];
