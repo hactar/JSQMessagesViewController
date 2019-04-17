@@ -17,7 +17,6 @@
 //
 
 #import "JSQMessagesCollectionViewCellIncoming.h"
-#import "JSQMessages-Swift.h"
 
 @implementation JSQMessagesCollectionViewCellIncoming
     
