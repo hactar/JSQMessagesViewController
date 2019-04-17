@@ -8,7 +8,14 @@
 
 import UIKit
 
-class FeedbackViewController: UIViewController {
+class Feedback: Codable {
+    let language: String
+    let question: String
+    let answer: String
+    var userText: String?
+}
+
+@objc class FeedbackViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,5 +33,15 @@ class FeedbackViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    @IBAction func closeButtonHit(_ sender: Any) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func sendFeedbackButtonHit(_ sender: Any) {
+            self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
 }

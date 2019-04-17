@@ -25,12 +25,16 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cGS-6Q-8WD" customClass="BMDesignableButton" customModule="Bikemap" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cGS-6Q-8WD">
                     <rect key="frame" x="44.5" y="243.5" width="325" height="409.5"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAk-wr-NuU">
                             <rect key="frame" x="293" y="16" width="16" height="22"/>
-                            <state key="normal" image="closePopup"/>
+                            <inset key="imageEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                            <state key="normal" image="JSQMessagesAssets.bundle/Images/closePopup.png"/>
+                            <connections>
+                                <action selector="closeButtonHit:" destination="-1" eventType="touchUpInside" id="rmv-Y9-oS7"/>
+                            </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2z2-O5-uKo">
                             <rect key="frame" x="0.0" y="32" width="325" height="345.5"/>
@@ -62,13 +66,8 @@
                                     </constraints>
                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="8"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
                                 </textView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tt-Xz-9re" customClass="BMDesignableButton" customModule="Bikemap" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tt-Xz-9re">
                                     <rect key="frame" x="34" y="301.5" width="257" height="44"/>
                                     <color key="backgroundColor" red="1" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
@@ -78,11 +77,9 @@
                                     <state key="normal" title="Send Feedback">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="8"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="sendFeedbackButtonHit:" destination="-1" eventType="touchUpInside" id="prW-KB-lLv"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <gestureRecognizers/>
@@ -109,34 +106,19 @@
                         <constraint firstItem="2z2-O5-uKo" firstAttribute="top" secondItem="cGS-6Q-8WD" secondAttribute="top" constant="32" id="rEf-Oi-AFX"/>
                         <constraint firstAttribute="bottom" secondItem="2z2-O5-uKo" secondAttribute="bottom" constant="32" id="u2k-iA-x9n"/>
                     </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="12"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.26000000000000001" colorSpace="calibratedRGB"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                            <size key="value" width="0.0" height="2"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                            <real key="value" value="20"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                            <real key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="cGS-6Q-8WD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Arn-Pa-ydn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cGS-6Q-8WD" secondAttribute="trailing" constant="44.5" id="H6y-ar-6Gu"/>
                 <constraint firstItem="cGS-6Q-8WD" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ovW-aL-OeJ"/>
+                <constraint firstItem="cGS-6Q-8WD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="44.5" id="wJj-YH-Njf"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
     <resources>
-        <image name="closePopup" width="16" height="16"/>
+        <image name="JSQMessagesAssets.bundle/Images/closePopup.png" width="16" height="16"/>
     </resources>
 </document>

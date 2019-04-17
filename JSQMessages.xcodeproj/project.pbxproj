@@ -513,9 +513,9 @@
 				88A25F8D19D8E01A00924534 /* JSQMessagesCollectionViewCell.m */,
 				88A25F8E19D8E01A00924534 /* JSQMessagesCollectionViewCellIncoming.h */,
 				88A25F8F19D8E01A00924534 /* JSQMessagesCollectionViewCellIncoming.m */,
+				88A25F9019D8E01A00924534 /* JSQMessagesCollectionViewCellIncoming.xib */,
 				CDEFB5D2226682BE007646D7 /* FeedbackViewController.swift */,
 				CDEFB5D3226682BE007646D7 /* FeedbackViewController.xib */,
-				88A25F9019D8E01A00924534 /* JSQMessagesCollectionViewCellIncoming.xib */,
 				88A25F9119D8E01A00924534 /* JSQMessagesCollectionViewCellOutgoing.h */,
 				88A25F9219D8E01A00924534 /* JSQMessagesCollectionViewCellOutgoing.m */,
 				88A25F9319D8E01A00924534 /* JSQMessagesCollectionViewCellOutgoing.xib */,
@@ -649,8 +649,6 @@
 				88A25F1719D8DEC400924534 /* Sources */,
 				88A25F1819D8DEC400924534 /* Frameworks */,
 				88A25F1919D8DEC400924534 /* Resources */,
-				EA2621B448CB128CDE6418E4 /* [CP] Embed Pods Frameworks */,
-				6D34DF28FCE50F3C012DEE49 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -759,36 +757,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6D34DF28FCE50F3C012DEE49 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JSQMessagesTests/Pods-JSQMessagesTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EA2621B448CB128CDE6418E4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JSQMessagesTests/Pods-JSQMessagesTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
