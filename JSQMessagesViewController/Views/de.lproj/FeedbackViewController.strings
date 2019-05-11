@@ -1,0 +1,9 @@
+
+/* Class = "UIButton"; normalTitle = "Send Feedback"; ObjectID = "8Tt-Xz-9re"; */
+"8Tt-Xz-9re.normalTitle" = "Feedback Senden";
+
+/* Class = "UILabel"; text = "How was the translation or answer?"; ObjectID = "AyI-5f-dr2"; */
+"AyI-5f-dr2.text" = "Wie war die Antwort?";
+
+/* Class = "UILabel"; text = "FEEDBACK"; ObjectID = "NLl-ZU-VPu"; */
+"NLl-ZU-VPu.text" = "FEEDBACK";

@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedbackViewController" customModule="JSQMessages" customModuleProvider="target">
             <connections>
+                <outlet property="popupView" destination="cGS-6Q-8WD" id="9Hd-W9-o2k"/>
+                <outlet property="sendFeedbackButton" destination="8Tt-Xz-9re" id="icl-hJ-TnL"/>
+                <outlet property="textView" destination="VMK-nV-euO" id="66h-l3-Edm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -64,7 +67,7 @@
                                 </textView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tt-Xz-9re">
                                     <rect key="frame" x="34" y="300.5" width="257" height="44"/>
-                                    <color key="backgroundColor" red="1" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.92242574691772461" green="0.30391740798950195" blue="0.23916834592819214" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="e0Y-8q-x90"/>
                                     </constraints>
@@ -104,6 +107,7 @@
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="cGS-6Q-8WD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Arn-Pa-ydn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cGS-6Q-8WD" secondAttribute="trailing" constant="44.5" id="H6y-ar-6Gu"/>
@@ -111,7 +115,15 @@
                 <constraint firstItem="cGS-6Q-8WD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="44.5" id="wJj-YH-Njf"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="3px-0i-Ror" appends="YES" id="sF5-lW-2E6"/>
+            </connections>
         </view>
+        <tapGestureRecognizer id="3px-0i-Ror">
+            <connections>
+                <action selector="backgroundHit:" destination="-1" id="az9-yy-puh"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="JSQMessagesAssets.bundle/Images/closePopup.png" width="16" height="16"/>

@@ -20,6 +20,7 @@
 
 #import "JSQMessagesLabel.h"
 #import "JSQMessagesCellTextView.h"
+#import "JSQMessages-Swift.h"
 
 @class JSQMessagesCollectionViewCell;
 
@@ -162,11 +163,11 @@
 @property (weak, nonatomic) UIView *mediaView;
 
 /**
- *  The URL to share when this cells share button is hit.
+ *  Contains additional information needed for the additional bubble options menu.
  *
  *
  */
-@property (strong, nonatomic) NSURL *shareURL;
+@property (strong, nonatomic) AdditionalBubbleOptions *additionalBubbleOptions;
 
 /**
  *  Returns the underlying gesture recognizer for tap gestures in the avatarImageView of the cell.

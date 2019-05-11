@@ -104,8 +104,10 @@
 		88C00A521A44D4E500B004B3 /* JSQVideoMediaItemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C00A511A44D4E500B004B3 /* JSQVideoMediaItemTests.m */; };
 		88C4583019F5F7A0008FD427 /* JSQMessagesMediaViewBubbleImageMasker.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4582F19F5F7A0008FD427 /* JSQMessagesMediaViewBubbleImageMasker.m */; };
 		CD13A04A1FDC28470028D213 /* JSQMessagesTypingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD13A0491FDC28470028D213 /* JSQMessagesTypingView.m */; };
+		CD86C0CF2284592C0089ABB7 /* AdditionalBubbleOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD86C0CD2284592B0089ABB7 /* AdditionalBubbleOptions.swift */; };
+		CD86C0D02284592C0089ABB7 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD86C0CE2284592B0089ABB7 /* Feedback.swift */; };
+		CD86C0D1228766330089ABB7 /* FeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD86C0D3228766330089ABB7 /* FeedbackViewController.xib */; };
 		CDEFB5D4226682BE007646D7 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEFB5D2226682BE007646D7 /* FeedbackViewController.swift */; };
-		CDEFB5D5226682BE007646D7 /* FeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDEFB5D3226682BE007646D7 /* FeedbackViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -267,9 +269,13 @@
 		C7A3738E4D57EDF7D465544A /* libPods-JSQMessagesTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JSQMessagesTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD13A0481FDC28470028D213 /* JSQMessagesTypingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSQMessagesTypingView.h; sourceTree = "<group>"; };
 		CD13A0491FDC28470028D213 /* JSQMessagesTypingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQMessagesTypingView.m; sourceTree = "<group>"; };
+		CD86C0CD2284592B0089ABB7 /* AdditionalBubbleOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalBubbleOptions.swift; sourceTree = "<group>"; };
+		CD86C0CE2284592B0089ABB7 /* Feedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
+		CD86C0D2228766330089ABB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FeedbackViewController.xib; sourceTree = "<group>"; };
+		CD86C0D52287663C0089ABB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FeedbackViewController.strings; sourceTree = "<group>"; };
+		CD86C0D72287663E0089ABB7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/FeedbackViewController.strings; sourceTree = "<group>"; };
 		CDEFB5D1226682BD007646D7 /* JSQMessages-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JSQMessages-Bridging-Header.h"; sourceTree = "<group>"; };
 		CDEFB5D2226682BE007646D7 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
-		CDEFB5D3226682BE007646D7 /* FeedbackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -389,6 +395,7 @@
 		88A25F3E19D8E01A00924534 /* JSQMessagesViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CD86C0CC2284579F0089ABB7 /* AdditionalBubbleOptions */,
 				88A25F3F19D8E01A00924534 /* Assets */,
 				88A25F5419D8E01A00924534 /* Categories */,
 				88A25F5F19D8E01A00924534 /* Controllers */,
@@ -515,7 +522,7 @@
 				88A25F8F19D8E01A00924534 /* JSQMessagesCollectionViewCellIncoming.m */,
 				88A25F9019D8E01A00924534 /* JSQMessagesCollectionViewCellIncoming.xib */,
 				CDEFB5D2226682BE007646D7 /* FeedbackViewController.swift */,
-				CDEFB5D3226682BE007646D7 /* FeedbackViewController.xib */,
+				CD86C0D3228766330089ABB7 /* FeedbackViewController.xib */,
 				88A25F9119D8E01A00924534 /* JSQMessagesCollectionViewCellOutgoing.h */,
 				88A25F9219D8E01A00924534 /* JSQMessagesCollectionViewCellOutgoing.m */,
 				88A25F9319D8E01A00924534 /* JSQMessagesCollectionViewCellOutgoing.xib */,
@@ -621,6 +628,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CD86C0CC2284579F0089ABB7 /* AdditionalBubbleOptions */ = {
+			isa = PBXGroup;
+			children = (
+				CD86C0CD2284592B0089ABB7 /* AdditionalBubbleOptions.swift */,
+				CD86C0CE2284592B0089ABB7 /* Feedback.swift */,
+			);
+			path = AdditionalBubbleOptions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -681,10 +697,9 @@
 			};
 			buildConfigurationList = 88A25EFD19D8DEC400924534 /* Build configuration list for PBXProject "JSQMessages" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 				es,
@@ -723,7 +738,7 @@
 				88A25FCD19D8E01A00924534 /* JSQMessagesCollectionViewCellIncoming.xib in Resources */,
 				88A25FD619D8E01A00924534 /* JSQMessagesToolbarContentView.xib in Resources */,
 				88A25F3A19D8DF2500924534 /* Images.xcassets in Resources */,
-				CDEFB5D5226682BE007646D7 /* FeedbackViewController.xib in Resources */,
+				CD86C0D1228766330089ABB7 /* FeedbackViewController.xib in Resources */,
 				88A25FBC19D8E01A00924534 /* JSQMessagesViewController.xib in Resources */,
 				88A25FD819D8E01A00924534 /* JSQMessagesTypingIndicatorFooterView.xib in Resources */,
 				88A25F3919D8DF2500924534 /* Main.storyboard in Resources */,
@@ -797,6 +812,8 @@
 				88A25FB619D8E01A00924534 /* NSString+JSQMessages.m in Sources */,
 				CD13A04A1FDC28470028D213 /* JSQMessagesTypingView.m in Sources */,
 				88A901B619F618B100F99777 /* JSQMediaItem.m in Sources */,
+				CD86C0CF2284592C0089ABB7 /* AdditionalBubbleOptions.swift in Sources */,
+				CD86C0D02284592C0089ABB7 /* Feedback.swift in Sources */,
 				88A25FCC19D8E01A00924534 /* JSQMessagesCollectionViewCellIncoming.m in Sources */,
 				88A25FBE19D8E01A00924534 /* JSQMessagesBubbleImageFactory.m in Sources */,
 				88A25FDF19D8E0C400924534 /* DemoMessagesViewController.m in Sources */,
@@ -867,6 +884,16 @@
 				88A25F3119D8DF2500924534 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CD86C0D3228766330089ABB7 /* FeedbackViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD86C0D2228766330089ABB7 /* Base */,
+				CD86C0D52287663C0089ABB7 /* en */,
+				CD86C0D72287663E0089ABB7 /* de */,
+			);
+			name = FeedbackViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
