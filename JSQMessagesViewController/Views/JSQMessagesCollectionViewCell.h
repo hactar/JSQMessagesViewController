@@ -20,7 +20,7 @@
 
 #import "JSQMessagesLabel.h"
 #import "JSQMessagesCellTextView.h"
-#import "JSQMessages-Swift.h"
+#import "JSQMessagesViewController-Swift.h"
 
 @class JSQMessagesCollectionViewCell;
 

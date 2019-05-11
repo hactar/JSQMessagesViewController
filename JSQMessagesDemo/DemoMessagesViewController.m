@@ -17,7 +17,7 @@
 //
 
 #import "DemoMessagesViewController.h"
-#import "JSQMessages-Swift.h"
+#import "JSQMessagesViewController-Swift.h"
 
 @implementation DemoMessagesViewController
 
