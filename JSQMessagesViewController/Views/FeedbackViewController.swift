@@ -29,15 +29,17 @@ import Foundation
 
 
 
-@objc class FeedbackViewController: UIViewController {
-    @objc var additionalBubbleOptions: AdditionalBubbleOptions?
-
+@objc public class FeedbackViewController: BMKeyboardCompatibleViewController {
+    @objc public var additionalBubbleOptions: AdditionalBubbleOptions?
+    
     @IBOutlet weak var sendFeedbackButton: UIButton!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var popupView: UIView!
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.keyboardConstraintMultiplier = 0.6
+        
         // Do any additional setup after loading the view.
         self.popupView.layer.cornerRadius = 5.0
         self.popupView.layer.masksToBounds = true
@@ -53,11 +55,11 @@ import Foundation
     func cancelFeedback() {
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
-
+    
     @IBAction func backgroundHit(_ sender: Any) {
         cancelFeedback()
     }
-    override func viewWillAppear(_ animated: Bool) {
+    override public func viewWillAppear(_ animated: Bool) {
         let finalColor = view.backgroundColor
         view.backgroundColor = .clear
         UIView.animate(withDuration: 0.8) {
@@ -65,25 +67,25 @@ import Foundation
         }
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-    
+    override public func viewWillDisappear(_ animated: Bool) {
+        
         self.view.backgroundColor = .clear
         
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
     @IBAction func closeButtonHit(_ sender: Any) {
         cancelFeedback()
-
+        
     }
     
     @IBAction func sendFeedbackButtonHit(_ sender: Any) {

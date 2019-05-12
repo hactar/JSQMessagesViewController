@@ -9,12 +9,24 @@
 import Foundation
 
 @objc public class AdditionalBubbleOptions: NSObject, Codable {
-    @objc public let shareURL: URL?
+    @objc public var shareURL: URL? {
+        get {
+            guard var url = self.baseShareURL, let feedback = feedback else {
+                return nil
+            }
+            //            if let locale = feedback.locale {
+            //                url.appendPathComponent(locale)
+            //            }
+            url.appendPathComponent(feedback.query)
+            return url
+        }
+    }
+    @objc public let baseShareURL: URL?
     @objc public let feedback: Feedback?
     @objc public let feedbackEndpoint: URL?
     
-    @objc public init(shareURL: URL?, feedback: Feedback?, feedbackEndpoint: URL?) {
-        self.shareURL = shareURL
+    @objc public init(baseShareURL: URL?, feedback: Feedback?, feedbackEndpoint: URL?) {
+        self.baseShareURL = baseShareURL
         self.feedback = feedback
         self.feedbackEndpoint = feedbackEndpoint
     }

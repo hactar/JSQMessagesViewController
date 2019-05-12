@@ -520,7 +520,7 @@
                                               NSUnderlineStyleAttributeName : @(NSUnderlineStyleSingle | NSUnderlinePatternSolid) };
     }
     Feedback *feedback = [[Feedback alloc] initWithQuery:@"testQuery" answer:@"testAnswer" feedbackMessage:@"test message" locale:@"en" clientType:@"iOS" versionNumber:@"123"];
-    cell.additionalBubbleOptions = [[AdditionalBubbleOptions alloc] initWithShareURL:[NSURL URLWithString:@"https://test-url.com"] feedback: feedback feedbackEndpoint:[NSURL URLWithString:@"http://127.0.0.1:8080/feedback"]];
+    cell.additionalBubbleOptions = [[AdditionalBubbleOptions alloc] initWithBaseShareURL:[NSURL URLWithString:@"https://bla.com"] feedback:feedback feedbackEndpoint:nil];
     return cell;
 }
 

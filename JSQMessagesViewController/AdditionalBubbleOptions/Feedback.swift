@@ -40,4 +40,13 @@ import Foundation
         self.versionNumber = versionNumber
     }
     
+    @objc public init(query: String, answer: String) {
+        self.query = query
+        self.answer = answer
+        self.feedbackMessage = nil
+        self.locale = Bundle.main.preferredLocalizations.first
+        self.clientType = "iOS"
+        self.versionNumber = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
+    }
+    
 }

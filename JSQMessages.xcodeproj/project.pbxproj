@@ -107,6 +107,7 @@
 		CD86C0CF2284592C0089ABB7 /* AdditionalBubbleOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD86C0CD2284592B0089ABB7 /* AdditionalBubbleOptions.swift */; };
 		CD86C0D02284592C0089ABB7 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD86C0CE2284592B0089ABB7 /* Feedback.swift */; };
 		CD86C0D1228766330089ABB7 /* FeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD86C0D3228766330089ABB7 /* FeedbackViewController.xib */; };
+		CD86C0D92288C63F0089ABB7 /* KeyboardCompatibleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD86C0D82288C63F0089ABB7 /* KeyboardCompatibleViewController.swift */; };
 		CDEFB5D4226682BE007646D7 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEFB5D2226682BE007646D7 /* FeedbackViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -274,6 +275,7 @@
 		CD86C0D2228766330089ABB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FeedbackViewController.xib; sourceTree = "<group>"; };
 		CD86C0D52287663C0089ABB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FeedbackViewController.strings; sourceTree = "<group>"; };
 		CD86C0D72287663E0089ABB7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/FeedbackViewController.strings; sourceTree = "<group>"; };
+		CD86C0D82288C63F0089ABB7 /* KeyboardCompatibleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardCompatibleViewController.swift; sourceTree = "<group>"; };
 		CDEFB5D1226682BD007646D7 /* JSQMessages-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JSQMessages-Bridging-Header.h"; sourceTree = "<group>"; };
 		CDEFB5D2226682BE007646D7 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -438,6 +440,7 @@
 		88A25F5F19D8E01A00924534 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CD86C0D82288C63F0089ABB7 /* KeyboardCompatibleViewController.swift */,
 				88A25F6019D8E01A00924534 /* JSQMessagesKeyboardController.h */,
 				88A25F6119D8E01A00924534 /* JSQMessagesKeyboardController.m */,
 				88A25F6219D8E01A00924534 /* JSQMessagesViewController.h */,
@@ -782,6 +785,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88078A9D19D8FEB5005B4595 /* JSQMessagesMediaPlaceholderView.m in Sources */,
+				CD86C0D92288C63F0089ABB7 /* KeyboardCompatibleViewController.swift in Sources */,
 				88A25FCE19D8E01A00924534 /* JSQMessagesCollectionViewCellOutgoing.m in Sources */,
 				88A25FD119D8E01A00924534 /* JSQMessagesInputToolbar.m in Sources */,
 				88A25FCB19D8E01A00924534 /* JSQMessagesCollectionViewCell.m in Sources */,
