@@ -20,9 +20,9 @@
 
 #import "JSQMessagesLabel.h"
 #import "JSQMessagesCellTextView.h"
-#import "JSQMessagesViewController-Swift.h"
 
 @class JSQMessagesCollectionViewCell;
+@class AdditionalBubbleOptions;
 
 /**
  *  The `JSQMessagesCollectionViewCellDelegate` protocol defines methods that allow you to manage
