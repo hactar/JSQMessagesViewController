@@ -17,11 +17,12 @@
 //
 
 #import "JSQMessagesCollectionViewCellIncoming.h"
+#import "NSBundle+JSQMessages.h"
 
 
 // when building this for a pod use angled brackets. when testing locally use quotes.
-#import <JSQMessagesViewController/JSQMessagesViewController-swift.h>
-//#import "JSQMessagesViewController-swift.h"
+//#import <JSQMessagesViewController/JSQMessagesViewController-swift.h>
+#import "JSQMessagesViewController-swift.h"
 
 @interface UIView (FindUIViewController)
 - (UIViewController *) firstAvailableUIViewController;
@@ -73,15 +74,15 @@
 
 - (IBAction)shareButtonTapped:(UIButton *)sender {
     UIViewController *controller = [self firstAvailableUIViewController];
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Further options", nil) message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:[NSBundle jsq_localizedStringForKey:@"Further options"] message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     alertController.popoverPresentationController.sourceView = sender;
     alertController.popoverPresentationController.sourceRect = sender.bounds;
     
-    UIAlertAction *action1 = [UIAlertAction actionWithTitle:NSLocalizedString(@"Share answer with others", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:[NSBundle jsq_localizedStringForKey:@"Share answer with others"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self actuallyShare:sender];
     }];
     
-    UIAlertAction *action2 = [UIAlertAction actionWithTitle:NSLocalizedString(@"Send feedback", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:[NSBundle jsq_localizedStringForKey:@"Send Feedback"] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         NSLog(@"Open Feedback interface...");
         
         
@@ -92,7 +93,7 @@
         [controller presentViewController:feedbackViewController animated:YES completion:nil];
     }];
     
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:[NSBundle jsq_localizedStringForKey:@"Cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         // do nothing
     }];
     [alertController addAction:action1];
