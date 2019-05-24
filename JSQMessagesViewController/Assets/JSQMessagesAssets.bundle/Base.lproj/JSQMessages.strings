@@ -35,3 +35,12 @@
 "Further options" = "Further options";
 
 "Cancel" = "Cancel";
+
+/* Class = "UIButton"; normalTitle = "Send Feedback"; ObjectID = "8Tt-Xz-9re"; */
+"8Tt-Xz-9re.normalTitle" = "Send Feedback";
+
+/* Class = "UILabel"; text = "How was the translation or answer?"; ObjectID = "AyI-5f-dr2"; */
+"AyI-5f-dr2.text" = "How was the translation or answer?";
+
+/* Class = "UILabel"; text = "FEEDBACK"; ObjectID = "NLl-ZU-VPu"; */
+"NLl-ZU-VPu.text" = "FEEDBACK";
