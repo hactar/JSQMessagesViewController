@@ -3,7 +3,7 @@ import UIKit
 /// Use this class as the superclass for UIViewControllers that need to scroll up
 /// when the keyboard shows. Attach the bottom constraint of the view that should
 /// scroll up to `attachToKeyboardConstraint`.
-public class BMKeyboardCompatibleViewController: UIViewController {
+public class KeyboardCompatibleViewController: UIViewController {
     
     /// An outlet to attach the bottom of the view that should scroll up with the
     /// keyboard.

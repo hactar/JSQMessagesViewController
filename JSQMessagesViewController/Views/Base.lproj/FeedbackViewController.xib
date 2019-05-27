@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedbackViewController" customModule="JSQMessages" customModuleProvider="target">
             <connections>
                 <outlet property="attachToKeyboardConstraint" destination="ovW-aL-OeJ" id="VGa-N3-x8p"/>
+                <outlet property="closeButton" destination="OAk-wr-NuU" id="bHe-Mz-MB4"/>
                 <outlet property="popupView" destination="cGS-6Q-8WD" id="9Hd-W9-o2k"/>
                 <outlet property="sendFeedbackButton" destination="8Tt-Xz-9re" id="icl-hJ-TnL"/>
                 <outlet property="textView" destination="VMK-nV-euO" id="66h-l3-Edm"/>

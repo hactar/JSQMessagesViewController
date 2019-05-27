@@ -29,9 +29,10 @@ import Foundation
 
 
 
-@objc public class FeedbackViewController: BMKeyboardCompatibleViewController {
+@objc public class FeedbackViewController: KeyboardCompatibleViewController {
     @objc public var additionalBubbleOptions: AdditionalBubbleOptions?
     
+    @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var sendFeedbackButton: UIButton!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var popupView: UIView!
@@ -120,6 +121,20 @@ import Foundation
         
     }
     
+    override func dismissKeyboard(sender: UITapGestureRecognizer?) {
+        if self.textView.isFirstResponder == true {
+            self.textView.resignFirstResponder()
+        } else {
+            if let subviews = sender?.view?.subviews, let sender = sender {
+                let allViewsAtGestureLocation = subviews.filter { $0.bounds.contains(sender.location(in: $0)) }
+                let firstHitView = subviews.first(where: { $0.bounds.contains(sender.location(in: $0)) })
+                if firstHitView == nil || self.closeButton.bounds.contains(sender.location(in: self.closeButton)) == true {
+                    cancelFeedback()
+                }
+            }
+        }
+        
+    }
     
     
 }
