@@ -29,7 +29,7 @@ import Foundation
 
 
 
-@objc public class FeedbackViewController: KeyboardCompatibleViewController {
+@objc public class FeedbackViewController: KeyboardCompatibleViewController, UITextViewDelegate {
     @objc public var additionalBubbleOptions: AdditionalBubbleOptions?
     
     @IBOutlet weak var closeButton: UIButton!
@@ -39,7 +39,7 @@ import Foundation
     override public func viewDidLoad() {
         super.viewDidLoad()
         
-        self.keyboardConstraintMultiplier = 0.6
+        self.keyboardConstraintMultiplier = 0.75
         
         // Do any additional setup after loading the view.
         self.popupView.layer.cornerRadius = 5.0
@@ -51,8 +51,18 @@ import Foundation
         self.sendFeedbackButton.layer.cornerRadius = 5.0
         self.sendFeedbackButton.layer.masksToBounds = true
         
+        self.textView.delegate = self
+        
     }
     
+    public func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            self.sendFeedbackButtonHit(textView)
+            return false
+        }
+        return true
+
+    }
     func cancelFeedback() {
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
