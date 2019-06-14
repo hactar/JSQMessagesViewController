@@ -21,8 +21,12 @@
 
 
 // when building this for a pod use angled brackets. when testing locally use quotes.
-//#import <JSQMessagesViewController/JSQMessagesViewController-swift.h>
-#import "JSQMessagesViewController-swift.h"
+
+#ifdef COCOAPODS
+#import <JSQMessagesViewController/JSQMessagesViewController-Swift.h>
+#else
+#import "JSQMessagesViewController-Swift.h"
+#endif
 
 @interface UIView (FindUIViewController)
 - (UIViewController *) firstAvailableUIViewController;
